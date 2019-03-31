@@ -2,13 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TestProject</title>
+  <title>Get Flickr Images</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+    <script>
+         
+        
+        function JavaScriptFetch() {
+            var script = document.createElement('script');
+            script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + document.getElementById("searchbar").value;;
+            document.querySelector('head').appendChild(script);
+        }
+
+        function jsonFlickrFeed(data) {
+            var outputHTML = "";
+            data.items.forEach(function (element) {
+                // outputHTML += "<div class=\"container\">";
+                outputHTML += "<img id=\"outputImage\" src=\"" + element.media.m + "\"/>";
+                // outputHTML += "</div>";
+            });
+
+            document.getElementById("outputDiv").innerHTML = outputHTML;
+        }
+    </script>
+
+    <!-- <script type="text/javascript">
+        $(document).ready(function () {
+            $("#reset").click(function (e) {
+                location.reload();
+            });
+
+            $("#submit").click(function (e) {
+                $("#outputDiv").html("");
+
+                
+            });
+        });
+    </script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <app-root></app-root>
 </body>
 </html>

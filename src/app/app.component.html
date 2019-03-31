@@ -1,21 +1,75 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background: #111;
+        }
 
-<router-outlet></router-outlet>
+        h1, h2, h3 {
+            text-align: center;
+            color: #FFF;
+        }
+
+            h2 a {
+                color: #0184e3;
+                text-decoration: none;
+            }
+
+
+
+        .container {
+            width: 985px;
+            margin: auto;
+            color: #FFF;
+            font-size: 25px;
+        }
+
+            .container h3 {
+                font-size: 20px;
+            }
+
+        #content {
+            border: dashed 2px #CCC;
+            padding: 10px;
+        }
+
+
+            #reset:hover {
+                color: #4CAF50;
+                background: #FFF;
+            }
+
+        #outputDiv {
+            color: #0184e3;
+        }
+        .imageBox {
+            width: 150px;
+            padding: 10px;
+            border: dashed 2px #CCC;
+        }
+
+        #outputImage{
+            padding: 10px;
+        }
+
+        input, #submit {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body onload="JavaScriptFetch()">
+    <h1>Get Images from Flickr</h1>
+    <div class="container">
+        <div id="content">
+            <input id="searchbar" type="text" placeholder="search text" />
+            <button id="submit" onclick="JavaScriptFetch()">Submit</button>
+            <div id="outputDiv"></div>
+            
+        </div>
+    </div>
+
+   
+</body>
+</html>
