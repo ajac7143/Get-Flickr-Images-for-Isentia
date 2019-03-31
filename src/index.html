@@ -22,13 +22,16 @@
 
         function jsonFlickrFeed(data) {
             var outputHTML = "";
+            var i = 1;
             data.items.forEach(function (element) {
-                // outputHTML += "<div class=\"container\">";
-                outputHTML += "<img id=\"outputImage\" src=\"" + element.media.m + "\"/>";
-                // outputHTML += "</div>";
+                outputHTML += "<div class=\"imageBox\">";
+                outputHTML += "<img align=\"middle\" src=\"" + element.media.m + "\"/>";
+                outputHTML += "</div>";
             });
 
             document.getElementById("outputDiv").innerHTML = outputHTML;
+            document.getElementsByTagName("BODY")[0].style.background = "#111";
+
         }
     </script>
 
